@@ -1,0 +1,38 @@
+<div class="analytics-container">
+  <div class="post-analytics">
+    <h2>Post Analytics</h2>
+    <div class="post-image">
+      <img ng-src="{{$ctrl.analytics.image}}" alt="Post Image" />
+    </div>
+    <div class="analytics-details">
+      <p><strong>Views:</strong> {{$ctrl.analytics.views}}</p>
+      <p><strong>Reactions:</strong> {{$ctrl.analytics.reactions}}</p>
+      <p><strong>Comments:</strong> {{$ctrl.analytics.comments.length}}</p>
+    </div>
+  </div>
+
+  <div class="comments-section">
+    <h3>Comments</h3>
+    <div class="comment" ng-repeat="comment in $ctrl.analytics.comments">
+      <div class="comment-content">
+        <p><strong>{{comment.author}}:</strong> {{comment.text}}</p>
+      </div>
+      <div class="reply-section">
+        <input
+          type="text"
+          ng-model="comment.replyText"
+          placeholder="Write a reply..."
+        />
+        <button ng-click="$ctrl.replyToComment(comment)">Reply</button>
+      </div>
+      <div class="replies" ng-if="comment.replies.length > 0">
+        <h4>Replies</h4>
+        <ul>
+          <li ng-repeat="reply in comment.replies">
+            <p><strong>{{reply.author}}:</strong> {{reply.text}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

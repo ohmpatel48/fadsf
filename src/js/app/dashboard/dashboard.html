@@ -1,0 +1,15 @@
+<div>
+  <h1>Dashboard</h1>
+  <e>
+  <dialog table
+    items="$ctrl.items"
+    on-action="$ctrl.handleTableAction(action, item)"
+  ></tablclass="mdl-dialog dialog-analyze">
+    <comment data="$ctrl.selectedItem"></comment>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button" ng-click="closeDialog()">
+        Close
+      </button>
+    </div>
+  </dialog>
+</div>
