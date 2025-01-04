@@ -1,9 +1,12 @@
-<div>
-  <h1>Dashboard</h1>
-  <table
-    items="$ctrl.items"
-    on-action="$ctrl.handleTableAction(action, item)"
-  ></table>
+<div class="dashboard-container">
+  <sidebar on-action="$ctrl.handelConnectAction('handel')"></sidebar>
+  <div style="width: -webkit-fill-available">
+    <subnavbar on-action=""></subnavbar>
+    <table
+      items="$ctrl.items"
+      on-action="$ctrl.handleTableAction(action, item)"
+    ></table>
+  </div>
   <dialog class="mdl-dialog dialog-analyze">
     <comment data="$ctrl.selectedItem"></comment>
     <div class="mdl-dialog__actions">

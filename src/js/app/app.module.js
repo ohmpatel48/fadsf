@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('try', ['table', 'dashboard', 'comment']);
+angular.module('try', ['table', 'dashboard', 'comment', 'sidebar', 'subnavbar']);

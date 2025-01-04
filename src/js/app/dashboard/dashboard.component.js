@@ -24,6 +24,15 @@ angular.module('dashboard').component('dashboard', {
       },
     ];
 
+    this.handelConnectAction = function (handel) {
+      if (handel === 'Facebook') {
+
+      } else if (handel === 'Instagram') {
+
+      } else if (handel === 'Linkedin') {
+
+      }
+    }
     this.handleTableAction = function (action, item) {
       if (action === 'edit') {
         alert(`Editing item: ${item.serialNo}`);
